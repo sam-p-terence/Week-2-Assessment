@@ -70,6 +70,7 @@ if (this.name + this.shifts) {
 
 
 
+
 /*
     Make a copy of the empOne object
     using the spread operator.
@@ -83,6 +84,18 @@ if (this.name + this.shifts) {
 */
 
 //CODE HERE
+
+class empTwo {
+    constructor(name, shifts) {
+      this.name = name
+      this.shifts = shifts
+    }
+}
+const Nick = new empTwo('Nick', 'who is a chad')
+
+const empTwo = {...empOne}
+
+
 
 
 
@@ -111,6 +124,17 @@ if (this.name + this.shifts) {
 
 //CODE HERE
 
+class Manager extends empOne {
+    constructor(name, shifts, employees) {
+      super(name, shifts)
+      this.employee = employee
+    }
+    getEmployees() {
+        if (this.name + this.employee) {
+          console.log(`${this.name} manages ${this.employee}`)
+  }
+}
+}
 
 
 /*
