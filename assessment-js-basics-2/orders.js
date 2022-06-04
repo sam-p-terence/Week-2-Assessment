@@ -31,7 +31,21 @@
 
 //CODE HERE
 
+class Ticket {
+    constructor(items, orderTime, customerId) {
+      this.items = items
+      this.orderTime = orderTime
+      this.customerId = customerId
+    }
 
+const {queued} = status
+
+updateStatus() {
+    this.status = 'New' 
+    console.log(`The order for customer${this.customerId} is now ${this.status} has been sold.`)
+  }
+
+}
 
 /*
     Create a new instance of your class.
@@ -45,6 +59,17 @@
 */
 
 //CODE HERE
+
+class Ticket {
+    constructor(items, orderTime, customerId) {
+      this.items = items
+      this.orderTime = orderTime
+      this.customerId = customerId
+    }
+}
+
+let firstTicket = new Ticket('MacBook', '12:07PM PST', 'Iron Man')
+
 
 
 /*

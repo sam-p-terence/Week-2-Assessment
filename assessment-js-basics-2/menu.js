@@ -32,6 +32,17 @@
 
 //CODE HERE
 
+const pizza = [ 
+    {
+      name: 'NY Pizza',
+      price: 13.99, 
+      category: 'New York Style',
+      popularity: 10,
+      rating: 95,
+      tags: ['cheesy', 'greasy', 'easy']
+    },
+]
+
 
 
 //////////////////PROBLEM 2////////////////////
@@ -44,6 +55,8 @@
 
 //CODE HERE
 
+console.log(pizza.popularity) 
+
 
 /*
     Second, log the second tag in your pizza's
@@ -53,6 +66,8 @@
 */
 
 //CODE HERE
+
+console.log(pizza.tags[1])
 
 
 /*
@@ -64,6 +79,14 @@
 
 //CODE HERE
 
+const updatedPizzaPrice = {
+    price: 15.99
+  }
+
+let {price: pizza} = updatedPizzaPrice
+console.log(updatedPizzaPrice)
+
+
 
 /*
     Fourth, and last, destructure the category
@@ -74,6 +97,12 @@
 
 //CODE HERE
 
+const updatedCategory = {
+    category: "Fake Chicago Deep dish (it's a casserole not a pizza)"
+  }
+
+let {category: pizza} = updatedCategory
+console.log(updatedCategory)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,6 +117,17 @@
 */
 
 //CODE HERE
+
+const foodArr = [ 
+    {
+      name: 'Sushi',
+      price: 20, 
+      category: 'Seafood',
+      popularity: 25,
+      rating: 90,
+      tags: ['fish', 'seaweed', 'rice']
+    },
+]
 
 
 
@@ -104,6 +144,16 @@
 */
 
 //CODE HERE
+
+
+
+const foodTags = foodArr.filter { 
+    console.log(`I had ${foodTags} for lunch`) 
+  } 
+foodTags("Tuna Sandwhich") 
+
+
+
 
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
@@ -150,6 +200,13 @@
 
 //CODE HERE
 
+const filterByProperty = foodArr.filter(foodArr => element){
+    return element % 2 === 0
+})
+
+const result = foodArr.filter(word => word.length > 6);
+
+console.log(result);
 
 /*
     Invoke the `filterByProperty` function passing

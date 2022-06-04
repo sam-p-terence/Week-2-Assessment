@@ -21,6 +21,18 @@
 
 //CODE HERE
 
+class Employee {
+    constructor(name, shifts) {
+      this.name = name
+      this.shifts = shifts
+    }
+
+    getSchedule() 
+        if (this.name + this.shifts) {
+          console.log(`${this.name} works on ${this.shifts}`)
+        }
+}
+
 
 
 /*
@@ -35,12 +47,27 @@
 
 //CODE HERE
 
+class empOne {
+    constructor(name, shifts) {
+      this.name = name
+      this.shifts = shifts
+    }
+}
+const Jess = new empOne('Jessy', 'weekday mornings and afternoons')
+
+
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
 
 //CODE HERE
+
+getSchedule(empOne) 
+if (this.name + this.shifts) {
+  console.log(`${this.name} works on ${this.shifts}`)
+}
+
 
 
 /*

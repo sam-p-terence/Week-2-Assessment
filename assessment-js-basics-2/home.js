@@ -23,10 +23,12 @@
 
 //CODE HERE
 
-
-
-
-
+const greetUser = name => {
+    return name + 'Welcome back,  '
+  }
+  
+let greetUser = name => `Welcome back, ${name}`
+  
 //////////////////PROBLEM 2////////////////////
 /* 
     Below is an array of zip codes that are in
@@ -51,6 +53,20 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
+function canWeDeliver(deliveryAreaZipCodes) {
+    let answers = [] 
+      for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+      if (deliveryAreaZipCodes[i] === deliveryAreaZipCodes.length) {
+        answers.push("You're in our delivery zone!")
+      } else {
+        answers.push("Sorry, we can't deliver to that address")
+      }
+    }
+    return answers
+  }
+  
+  let arrayEvaluator = canWeDeliver(deliveryAreaZipCodes)
+  
 
 
 /* 
@@ -71,6 +87,17 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+
+const canWeDeliverTwo(deliveryAreaZipCodes) {
+    answers = String(deliveryAreaZipCodes).trim()
+
+    if (deliveryAreaZipCodes.includes(deliveryAreaZipCodes.length)) {
+      return 'We can deliver to this zip code'
+    } else {
+      return 'We cannot deliver to this zip code'
+    }
+  }
+  
 
 
 //////////////////PROBLEM 3////////////////////
@@ -108,6 +135,8 @@ const deals = [
 
 //CODE HERE
 
+const replaceWithTen = deals.replace('15', '10')
+console.log(replaceWithTen)
 
 
 /*
@@ -124,3 +153,6 @@ const deals = [
 */
 
 //CODE HERE
+
+const replaceWithApril = deals.replace('March', 'April')
+console.log(replaceWithApril)
