@@ -32,16 +32,15 @@
 
 //CODE HERE
 
-const pizza = [ 
-    {
+const pizza = {
       name: 'NY Pizza',
       price: 13.99, 
       category: 'New York Style',
       popularity: 10,
       rating: 95,
       tags: ['cheesy', 'greasy', 'easy']
-    },
-]
+    };
+
 
 
 
@@ -79,12 +78,9 @@ console.log(pizza.tags[1])
 
 //CODE HERE
 
-const updatedPizzaPrice = {
-    price: 15.99
-  }
+const {price, name} = pizza
 
-let {price: pizza} = updatedPizzaPrice
-console.log(updatedPizzaPrice)
+console.log(price)
 
 
 
@@ -97,12 +93,9 @@ console.log(updatedPizzaPrice)
 
 //CODE HERE
 
-const updatedCategory = {
-    category: "Fake Chicago Deep dish (it's a casserole not a pizza)"
-  }
+const {category} = pizza
 
-let {category: pizza} = updatedCategory
-console.log(updatedCategory)
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -127,6 +120,38 @@ const foodArr = [
       rating: 90,
       tags: ['fish', 'seaweed', 'rice']
     },
+    {
+        name: 'rice',
+        price: 21, 
+        category: 'grain',
+        popularity: 26,
+        rating: 91,
+        tags: ['carb', 'seaweed', 'rice']
+      },
+      {
+        name: 'Sushi',
+        price: 20, 
+        category: 'Seafood',
+        popularity: 25,
+        rating: 90,
+        tags: ['fish', 'seaweed', 'rice']
+      },
+      {
+        name: 'Sushi',
+        price: 20, 
+        category: 'Seafood',
+        popularity: 25,
+        rating: 90,
+        tags: ['fish', 'seaweed', 'rice']
+      },
+      {
+        name: 'Sushi',
+        price: 20, 
+        category: 'Seafood',
+        popularity: 25,
+        rating: 90,
+        tags: ['fish', 'seaweed', 'rice']
+      },
 ]
 
 

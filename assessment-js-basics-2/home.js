@@ -24,10 +24,10 @@
 //CODE HERE
 
 const greetUser = name => {
-    return name + 'Welcome back,  '
+    return 'Welcome back, ' + name
   }
   
-let greetUser = name => `Welcome back, ${name}`
+// or // const greetUser = name => `Welcome back, ${name}`
   
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -53,21 +53,20 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
-function canWeDeliver(deliveryAreaZipCodes) {
-    let answers = [] 
+function canWeDeliver(zipCode) {
+    let answers = "" 
       for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
-      if (deliveryAreaZipCodes[i] === deliveryAreaZipCodes.length) {
-        answers.push("You're in our delivery zone!")
+      if (zipCode === deliveryAreaZipCodes[i]) {
+        answers = "You're in our delivery zone!"
+        break;
       } else {
-        answers.push("Sorry, we can't deliver to that address")
+        answers = "Sorry, we can't deliver to that address"
       }
     }
     return answers
-  }
+    }
   
-  let arrayEvaluator = canWeDeliver(deliveryAreaZipCodes)
   
-
 
 /* 
     Problem 2 Continued
@@ -88,10 +87,9 @@ function canWeDeliver(deliveryAreaZipCodes) {
 
 // CODE HERE
 
-const canWeDeliverTwo(deliveryAreaZipCodes) {
-    answers = String(deliveryAreaZipCodes).trim()
-
-    if (deliveryAreaZipCodes.includes(deliveryAreaZipCodes.length)) {
+function canWeDeliverTwo(zipCode) {
+    let answers = ""
+    if (deliveryAreaZipCodes.includes(zipCode)) {
       return 'We can deliver to this zip code'
     } else {
       return 'We cannot deliver to this zip code'
@@ -133,11 +131,16 @@ const deals = [
     to replace the 15 with a 10.
 */
 
+// deals[0].title
+// dealts[1].title
+
 //CODE HERE
 
-const replaceWithTen = deals.replace('15', '10')
-console.log(replaceWithTen)
+const replaceWithTen = deals[0].title.replace('15', '10')
 
+deals[0].title = replaceWithTen
+
+console.log(replaceWithTen)
 
 /*
     The restaurant is going to continue its
@@ -154,5 +157,8 @@ console.log(replaceWithTen)
 
 //CODE HERE
 
-const replaceWithApril = deals.replace('March', 'April')
+const replaceWithApril = deals[1].desc.replace('March', 'April')
+
+deals[1].desc = replaceWithApril
+
 console.log(replaceWithApril)
