@@ -35,6 +35,13 @@ const cart = [
 
 //CODE HERE
 
+function callbackFunction(preValue, currentValue) {
+    return preValue + currentValue.price
+}
+
+const sumPrice = cart.reduce(callbackFunction, 0)
+
+
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
 
@@ -55,6 +62,10 @@ const cart = [
 
 //CODE HERE
 
+function calcFinalPrice(cartTotal, couponValue, tax) {
+    let total = cartTotal + (tax * cartTotal) - couponValue
+    return total
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -80,6 +91,12 @@ const cart = [
 /*
     TEXT ANSWER HERE
 
+    name: string << Because a name usually has letter characters
+    customerType: string << because it includes letters and numbers
+    yearsAsACustomer: number
+    customerIsAlwaysRight: boolean << because it's not always right
+
+
 */
 
 /*
@@ -88,3 +105,10 @@ const cart = [
 */
 
 //CODE HERE
+
+const customer = {
+    name: 'Elon Musk'
+    customerType: 'Premium'
+    yearsAsACustomer: 10
+    CustomerIsAlwaysRight: False
+}

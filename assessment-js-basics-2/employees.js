@@ -134,6 +134,7 @@ class Manager extends empOne {
           console.log(`${this.name} manages ${this.employee}`)
   }
 }
+
 }
 
 
@@ -150,6 +151,15 @@ class Manager extends empOne {
 
 //CODE HERE
 
+class Manager2 extends empOne {
+    constructor(name, shifts, employees) {
+      super(name, shifts)
+      this.employee = employee
+    }
+}
+
+
+
 
 /*
     Call the `getEmployees` method on the
@@ -157,6 +167,9 @@ class Manager extends empOne {
 */
 
 //CODE HERE
+
+const newManager = new Manager2('Winstone', 'weekday mornings', 'Cece and Schimidt')
+
 
 /*
     Call the `addEmployee` method on the 
