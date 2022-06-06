@@ -23,7 +23,7 @@
 
 //CODE HERE
 
-const greetUser = name => {
+const greetUser = username => {
     return 'Welcome back, ' + name
   }
   
@@ -65,7 +65,22 @@ function canWeDeliver(zipCode) {
     }
     return answers
     }
-  
+
+    console.log(canWeDeliverTwo(23423))
+    console.log(canWeDeliverTwo(85205))
+
+
+// function canWeDeliver(zipCode) {
+//     if (deliveryAreaZipCodes.includes(zipCode)) {
+//         return "You're in our delivery zone!"
+//     } else {
+//         return "Sorry, we can't deliver to that address"
+//     }
+// }
+
+// console.log(canWeDeliver(85205))
+// console.log(canWeDeliver(84043))
+
   
 
 /* 
@@ -95,7 +110,7 @@ function canWeDeliverTwo(zipCode) {
       return 'We cannot deliver to this zip code'
     }
   }
-  
+                                                
 
 
 //////////////////PROBLEM 3////////////////////
@@ -138,7 +153,7 @@ const deals = [
 
 const replaceWithTen = deals[0].title.replace('15', '10')
 
-deals[0].title = replaceWithTen
+deals[0].title = replaceWithTen 
 
 console.log(replaceWithTen)
 
@@ -157,7 +172,7 @@ console.log(replaceWithTen)
 
 //CODE HERE
 
-const replaceWithApril = deals[1].desc.replace('March', 'April')
+const replaceWithApril = deals[1].desc.replace('March', 'April').trim()
 
 deals[1].desc = replaceWithApril
 
