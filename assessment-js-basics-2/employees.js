@@ -158,6 +158,7 @@ class Manager2 extends empOne {
     }
 }
 
+//const manager = new Manager('John')
 
 
 
@@ -178,6 +179,7 @@ const newManager = new Manager2('Winstone', 'weekday mornings', 'Cece and Schimi
 */
 
 //CODE HERE 
+Manager.addEmployee('John')
 
 /*
     Call the `getEmployees` method on the
@@ -186,3 +188,4 @@ const newManager = new Manager2('Winstone', 'weekday mornings', 'Cece and Schimi
 */
 
 //CODE HERE
+Manager.getEmployees()
