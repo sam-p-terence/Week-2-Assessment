@@ -36,13 +36,12 @@ class Ticket {
       this.items = items
       this.orderTime = orderTime
       this.customerId = customerId
+      this.status = 'queued'
     }
 
-const {queued} = status
-
-updateStatus() {
-    this.status = 'New' 
-    console.log(`The order for customer${this.customerId} is now ${this.status} has been sold.`)
+    updateStatus() {
+        this.status = newStatus
+        console.log(`The order for customer${this.customerId} is now ${this.status} has been sold.`)
   }
 
 }
@@ -60,15 +59,15 @@ updateStatus() {
 
 //CODE HERE
 
-class Ticket {
-    constructor(items, orderTime, customerId) {
-      this.items = items
-      this.orderTime = orderTime
-      this.customerId = customerId
-    }
-}
+// class Ticket {
+//     constructor(items, orderTime, customerId) {
+//       this.items = items
+//       this.orderTime = orderTime
+//       this.customerId = customerId
+//     }
+// }
 
-let firstTicket = new Ticket('MacBook', '12:07PM PST', 'Iron Man')
+const firstTicket = new Ticket('MacBook', '12:07PM PST', 'Iron Man')
 
 
 
@@ -79,3 +78,7 @@ let firstTicket = new Ticket('MacBook', '12:07PM PST', 'Iron Man')
 */
 
 //CODE HERE
+
+firstTicket.updateStatus('cooking')
+
+console.log(firstTicket)

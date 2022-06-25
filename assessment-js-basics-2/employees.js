@@ -27,8 +27,7 @@ class Employee {
       this.shifts = shifts
     }
 
-    getSchedule() 
-        if (this.name + this.shifts) {
+    getSchedule() {
           console.log(`${this.name} works on ${this.shifts}`)
         }
 }
@@ -47,12 +46,13 @@ class Employee {
 
 //CODE HERE
 
-class empOne {
-    constructor(name, shifts) {
-      this.name = name
-      this.shifts = shifts
-    }
-}
+// class empOne {
+//     constructor(name, shifts) {
+//       this.name = name
+//       this.shifts = shifts
+//     }
+// }
+
 const Jess = new empOne('Jessy', 'weekday mornings and afternoons')
 
 
@@ -63,11 +63,12 @@ const Jess = new empOne('Jessy', 'weekday mornings and afternoons')
 
 //CODE HERE
 
-getSchedule(empOne) 
-if (this.name + this.shifts) {
-  console.log(`${this.name} works on ${this.shifts}`)
-}
+// getSchedule(empOne) 
+// if (this.name + this.shifts) {
+//   console.log(`${this.name} works on ${this.shifts}`)
+// }
 
+empOne.getSchedule()
 
 
 
@@ -85,15 +86,15 @@ if (this.name + this.shifts) {
 
 //CODE HERE
 
-class empTwo {
-    constructor(name, shifts) {
-      this.name = name
-      this.shifts = shifts
-    }
-}
-const Nick = new empTwo('Nick', 'who is a chad')
+// class empTwo {
+//     constructor(name, shifts) {
+//       this.name = name
+//       this.shifts = shifts
+//     }
+// }
+// const Nick = new empTwo('Nick', 'who is a chad')
 
-const empTwo = {...empOne}
+const empTwo = {...empOne, name: 'Nick'}
 
 
 
@@ -124,18 +125,19 @@ const empTwo = {...empOne}
 
 //CODE HERE
 
-class Manager extends empOne {
+class Manager extends Employee {
     constructor(name, shifts, employees) {
-      super(name, shifts)
-      this.employee = employee
+        super(name, shifts)
+        this.employee = employees
     }
     getEmployees() {
-        if (this.name + this.employee) {
-          console.log(`${this.name} manages ${this.employee}`)
-  }
+        console.log(`${this.name} manages ${this.employee}`)
+    }
+    addEmployee(emp) {
+        this.employees.push(emp)
+    }
 }
 
-}
 
 
 /*
@@ -151,12 +153,14 @@ class Manager extends empOne {
 
 //CODE HERE
 
-class Manager2 extends empOne {
-    constructor(name, shifts, employees) {
-      super(name, shifts)
-      this.employee = employee
-    }
-}
+// class Manager2 extends empOne {
+//     constructor(name, shifts, employees) {
+//       super(name, shifts)
+//       this.employee = employee
+//     }
+// }
+
+const manager = new Manager('Terence', 'Swing shift',['Johnson', 'Bailey'])
 
 //const manager = new Manager('John')
 
@@ -169,8 +173,8 @@ class Manager2 extends empOne {
 
 //CODE HERE
 
-const newManager = new Manager2('Winstone', 'weekday mornings', 'Cece and Schimidt')
-
+// const newManager = new Manager2('Winstone', 'weekday mornings', 'Cece and Schimidt')
+manager.getEmployees()
 
 /*
     Call the `addEmployee` method on the 
@@ -179,7 +183,7 @@ const newManager = new Manager2('Winstone', 'weekday mornings', 'Cece and Schimi
 */
 
 //CODE HERE 
-Manager.addEmployee('John')
+manager.addEmployee('John')
 
 /*
     Call the `getEmployees` method on the
@@ -188,4 +192,4 @@ Manager.addEmployee('John')
 */
 
 //CODE HERE
-Manager.getEmployees()
+manager.getEmployees()

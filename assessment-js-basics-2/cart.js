@@ -41,6 +41,8 @@ function callbackFunction(preValue, currentValue) {
 
 const sumPrice = cart.reduce(callbackFunction, 0)
 
+console.log(sumPrice)
+
 
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
@@ -112,3 +114,5 @@ const customer = {
     yearsAsACustomer: 10
     CustomerIsAlwaysRight: False
 }
+
+console.log(customer)

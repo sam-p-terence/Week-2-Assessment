@@ -54,10 +54,10 @@ const pizza = {
 
 //CODE HERE
 
-console.log(pizza.popularity) 
+// console.log(pizza.popularity) 
 
-// let pizzaPop = pizza.popularity
-//console.log(pizzaPop)
+let pizzaPop = pizza.popularity
+console.log(pizzaPop)
 
 /*
     Second, log the second tag in your pizza's
@@ -68,10 +68,10 @@ console.log(pizza.popularity)
 
 //CODE HERE
 
-console.log(pizza.tags[1])
+// console.log(pizza.tags[1])
 
-// let secondPizzaTag = pizza.tags[1]
-// console.log(secondPizzaTag)
+let secondPizzaTag = pizza.tags[1]
+console.log(secondPizzaTag)
 
 /*
     Third, destructure the price off of the
@@ -82,7 +82,7 @@ console.log(pizza.tags[1])
 
 //CODE HERE
 
-const {price} = pizza
+let {price} = pizza
 
 console.log(price)
 
@@ -97,7 +97,7 @@ console.log(price)
 
 //CODE HERE
 
-const {category} = pizza
+let {category} = pizza
 
 console.log(category)
 
@@ -174,12 +174,14 @@ const foodArr = [
 
 //CODE HERE
 
-function callback() = {
-    return element.tag.includes('popular')
+function callback(element) {
+    return element.tags.includes('popular')
 }
 
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filterFood = foodArr.filter(callback)
+
+console.log(filterFood)
 
 
 
@@ -225,14 +227,15 @@ function callback() = {
 //CODE HERE
 
 const filterByProperty = function(property, number, type) {
-    const filteredArr = foodArr.filter((element) => 
+    const filteredArr = foodArr.filter((element) => {
     if (type === 'above') {
-        return
+        return element[property] > number
     } else if (type === 'below') { 
         return element[property] < number
+    }
     })
+    return filteredArr
 }
-console.log(filterByProperty('price', 5, 'above'))
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
@@ -241,3 +244,5 @@ console.log(filterByProperty('price', 5, 'above'))
 */
 
 //CODE HERE
+
+console.log(filterByProperty('popularity', 10, 'above'))
